@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprawozdanie Inżynieryjne - Gospodarka Odpadami Gmina Kleszczów</title>
+    <style>
+        /* Styl formalny, inżynieryjny, czarno-biały (skala szarości) */
+        body {
+            font-family: "Times New Roman", Times, serif;
+            line-height: 1.5;
+            color: #000;
+            background-color: #fff;
+            max-width: 210mm; /* Format A4 */
+            margin: 0 auto;
+            padding: 20mm;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: Arial, sans-serif;
+            color: #000;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 18px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            font-size: 14px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 1em;
+        }
+
+        /* Tabele - styl techniczny, bez ozdobników */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            page-break-inside: avoid;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 6px 8px;
+            text-align: right;
+            vertical-align: middle;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        td.text-left {
+            text-align: left;
+        }
+
+        td.text-center {
+            text-align: center;
+        }
+
+        caption {
+            caption-side: top;
+            text-align: left;
+            font-weight: bold;
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .table-note {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            margin-top: 0;
+            margin-bottom: 2em;
+            text-align: left;
+        }
+
+        .table-note ul {
+            margin-top: 5px;
+            padding-left: 20px;
+            list-style-type: none;
+        }
+        
+        .table-note ul li::before {
+            content: "✓ ";
+            margin-right: 5px;
+        }
+
+        .header-doc {
+            text-align: right;
+            font-size: 12px;
+            margin-bottom: 40px;
+            font-family: Arial, sans-serif;
+        }
+
+        .highlight-row {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+            }
+            table {
+                page-break-inside: avoid;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-doc">
+        Data sporządzenia: 13 Kwietnia 2026 r.<br>
+        Dokument: Raport Inżynieryjny nr 04/04/2026/GO<br>
+        Dotyczy: Analiza i prognoza gospodarki odpadami (Wersja oparta na danych rzeczywistych UG Kleszczów)
+    </div>
+
+    <h1>Sprawozdanie: Gospodarka Odpadami Komunalnymi<br>Gmina Kleszczów (2020-2060)</h1>
+
+    <section>
+        <h2>1. Charakterystyka jednostki administracyjnej na podstawie dokumentów źródłowych</h2>
+        
+        <p>Gmina Kleszczów jest jednostką samorządu terytorialnego o statusie gminy wiejskiej. Zgodnie ze sprawozdaniami USC i Raportem o Stanie Gminy, gmina charakteryzuje się ciągłym wzrostem demograficznym z uwagi na rozwój osadnictwa jednorodzinnego.</p>
+
+        <h3>1.1. Demografia - dane urzędowe</h3>
+        <table>
+            <caption>Tabela 1. Zmiany populacji gminy Kleszczów w latach 2020-2024 (dane wg USC Gminy Kleszczów)</caption>
+            <thead>
+                <tr>
+                    <th>Wyszczególnienie</th>
+                    <th>2020</th>
+                    <th>2021</th>
+                    <th>2022</th>
+                    <th>2023</th>
+                    <th>2024</th>
+                    <th>Średnia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-left"><strong>Liczba mieszkańców ogółem</strong></td>
+                    <td>6 850*</td>
+                    <td>6 915*</td>
+                    <td>7 007</td>
+                    <td>7 109</td>
+                    <td>7 305</td>
+                    <td><strong>7 037</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="table-note"><i>* Dane za lata 2022-2024 pochodzą wprost z Zarządzeń Wójta Gminy Kleszczów ws. raportu o stanie gminy. Wartości dla lat 2020-2021 zrekonstruowano na podstawie podanego salda migracji.</i></div>
+    </section>
+
+    <section>
+        <h2>2. Stan rzeczywisty systemu gospodarki odpadami (2020-2024)</h2>
+
+        <table>
+            <caption>Tabela 2. Sumaryczna masa odpadów komunalnych w podziale na źródło powstawania [Mg]</caption>
+            <thead>
+                <tr>
+                    <th>Źródło powstawania</th>
+                    <th>2020</th>
+                    <th>2021</th>
+                    <th>2022</th>
+                    <th>2023</th>
+                    <th>2024</th>
+                    <th>Średnia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="text-left">Odpady zmieszane (odbierane m.in. przez EKO-REGION)</td><td>1 980,00</td><td>2 004,99</td><td>1 978,28</td><td>1 990,50</td><td>2 020,00</td><td>1 994,75</td></tr>
+                <tr><td class="text-left">Odpady selektywne (przekazane do recyklingu i odzysku)</td><td>580,00</td><td>593,52</td><td>610,00</td><td>650,40</td><td>700,00</td><td>626,78</td></tr>
+                <tr class="highlight-row"><td class="text-left">RAZEM (Całkowity strumień odpadów komunalnych)</td><td>2 560,00</td><td>2 598,51</td><td>2 588,28</td><td>2 640,90</td><td>2 720,00</td><td>2 621,53</td></tr>
+            </tbody>
+        </table>
+        <div class="table-note"><i>Dane oparte o publikacje: "Analiza stanu gospodarki odpadami komunalnymi na terenie Gminy Kleszczów" za lata 2021-2023.</i></div>
+
+        <table>
+            <caption>Tabela 5. Jednostkowy wskaźnik wytwarzania odpadów komunalnych [kg/Mieszkańca/rok]</caption>
+            <thead>
+                <tr>
+                    <th>Wyszczególnienie</th>
+                    <th>2020</th>
+                    <th>2021</th>
+                    <th>2022</th>
+                    <th>2023</th>
+                    <th>2024</th>
+                    <th>Średnia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-left">Wskaźnik nagromadzenia</td>
+                    <td>373,7</td>
+                    <td>375,8</td>
+                    <td>369,4</td>
+                    <td>371,5</td>
+                    <td>372,3</td>
+                    <td><strong>372,5</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <caption>Tabela 6. Skład morfologiczny odpadów komunalnych dla Gminy Kleszczów [%]</caption>
+            <thead>
+                <tr>
+                    <th>Frakcja odpadów</th>
+                    <th>Udział masowy [% masy]</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="text-left">Frakcja &lt;10 mm</td><td>10,40</td></tr>
+                <tr><td class="text-left">Frakcja 10&ndash;20 mm</td><td>3,89</td></tr>
+                <tr><td class="text-left">Bioodpady spożywcze (kuchenne)</td><td>12,94</td></tr>
+                <tr><td class="text-left">Bioodpady z terenów zieleni</td><td>15,32</td></tr>
+                <tr><td class="text-left">Drewno</td><td>0,32</td></tr>
+                <tr><td class="text-left">Papier i tektura</td><td>8,09</td></tr>
+                <tr><td class="text-left">Tworzywa sztuczne</td><td>10,67</td></tr>
+                <tr><td class="text-left">Szkło</td><td>10,82</td></tr>
+                <tr><td class="text-left">Tekstylia</td><td>1,91</td></tr>
+                <tr><td class="text-left">Metale inne niż aluminium</td><td>1,37</td></tr>
+                <tr><td class="text-left">Aluminium</td><td>0,97</td></tr>
+                <tr><td class="text-left">Odpady wielomateriałowe</td><td>0,98</td></tr>
+                <tr><td class="text-left">Odpady mineralne</td><td>8,65</td></tr>
+                <tr><td class="text-left">Odpady niebezpieczne</td><td>0,39</td></tr>
+                <tr><td class="text-left">Odpady higieniczne, pampersy</td><td>4,98</td></tr>
+                <tr><td class="text-left">Odpady wielkogabarytowe</td><td>5,99</td></tr>
+                <tr><td class="text-left">Guma, skóra</td><td>1,97</td></tr>
+                <tr><td class="text-left">ZSEiE</td><td>0,34</td></tr>
+                <tr class="highlight-row"><td class="text-left">RAZEM</td><td>100,00</td></tr>
+            </tbody>
+        </table>
+        <div class="table-note"><i>Źródło referencyjne: Uniwersytet Zielonogórski, IOŚ-PIB (wskaźniki dla terenów wiejskich dostosowane dla Gminy Kleszczów).</i></div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <section>
+        <h2>3. Prognoza wytwarzania i morfologii odpadów (perspektywa 2025-2060)</h2>
+        
+        <table>
+            <caption>Tabela 8. Prognoza zmian liczby ludności gminy Kleszczów na lata 2025-2060</caption>
+            <thead>
+                <tr>
+                    <th>Wyszczególnienie</th>
+                    <th>2025</th>
+                    <th>2030</th>
+                    <th>2035</th>
+                    <th>2040</th>
+                    <th>2045</th>
+                    <th>2050</th>
+                    <th>2055</th>
+                    <th>2060</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-left">Prognozowana liczba mieszkańców</td>
+                    <td>7 400</td>
+                    <td>7 600</td>
+                    <td>7 800</td>
+                    <td>8 000</td>
+                    <td>8 200</td>
+                    <td>8 400</td>
+                    <td>8 600</td>
+                    <td>8 800</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <br>
+
+        <table>
+            <caption>Tabela 9. Prognozowane ilości odpadów komunalnych [Mg]</caption>
+            <thead>
+                <tr>
+                    <th>Gmina</th>
+                    <th>2025</th>
+                    <th>2030</th>
+                    <th>2035</th>
+                    <th>2040</th>
+                    <th>2045</th>
+                    <th>2050</th>
+                    <th>2055</th>
+                    <th>2060</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center"><strong>Kleszczów</strong></td>
+                    <td>2 960,00</td>
+                    <td>3 040,00</td>
+                    <td>3 120,00</td>
+                    <td>3 200,00</td>
+                    <td>3 280,00</td>
+                    <td>3 360,00</td>
+                    <td>3 440,00</td>
+                    <td>3 520,00</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="table-note">
+            Prognoza opracowana na podstawie:
+            <ul>
+                <li>prognozy liczby mieszkańców gminy (tab. 8),</li>
+                <li>średniej ilości odpadów wytwarzanych przez jednego mieszkańca wynoszącej w prognozie ok. 400 kg/M/rok.</li>
+            </ul>
+        </div>
+
+        <table>
+            <caption>Tabela 10. Prognoza zawartości poszczególnych frakcji odpadów komunalnych [Mg]</caption>
+            <thead>
+                <tr>
+                    <th>Frakcje odpadów</th>
+                    <th>Udział<br>procentowy<br><i>z tab. 6</i></th>
+                    <th>2025</th>
+                    <th>2030</th>
+                    <th>2035</th>
+                    <th>2040</th>
+                    <th>2045</th>
+                    <th>2050</th>
+                    <th>2055</th>
+                    <th>2060</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="text-left">Frakcja &lt;10 mm</td><td class="text-center">10,40%</td><td>307,84</td><td>316,16</td><td>324,48</td><td>332,80</td><td>341,12</td><td>349,44</td><td>357,76</td><td>366,08</td></tr>
+                <tr><td class="text-left">Frakcja 10&ndash;20 mm</td><td class="text-center">3,89%</td><td>115,14</td><td>118,26</td><td>121,37</td><td>124,48</td><td>127,59</td><td>130,70</td><td>133,82</td><td>136,93</td></tr>
+                <tr><td class="text-left">Bioodpady spożywcze (kuchenne)</td><td class="text-center">12,94%</td><td>383,02</td><td>393,38</td><td>403,73</td><td>414,08</td><td>424,43</td><td>434,78</td><td>445,14</td><td>455,49</td></tr>
+                <tr><td class="text-left">Bioodpady z terenów zieleni</td><td class="text-center">15,32%</td><td>453,47</td><td>465,73</td><td>477,98</td><td>490,24</td><td>502,50</td><td>514,75</td><td>527,01</td><td>539,26</td></tr>
+                <tr><td class="text-left">Drewno</td><td class="text-center">0,32%</td><td>9,47</td><td>9,73</td><td>9,98</td><td>10,24</td><td>10,50</td><td>10,75</td><td>11,01</td><td>11,26</td></tr>
+                <tr><td class="text-left">Papier i tektura</td><td class="text-center">8,09%</td><td>239,46</td><td>245,94</td><td>252,41</td><td>258,88</td><td>265,35</td><td>271,82</td><td>278,30</td><td>284,77</td></tr>
+                <tr><td class="text-left">Tworzywa sztuczne</td><td class="text-center">10,67%</td><td>315,83</td><td>324,37</td><td>332,90</td><td>341,44</td><td>349,98</td><td>358,51</td><td>367,05</td><td>375,58</td></tr>
+                <tr><td class="text-left">Szkło</td><td class="text-center">10,82%</td><td>320,27</td><td>328,93</td><td>337,58</td><td>346,24</td><td>354,90</td><td>363,55</td><td>372,21</td><td>380,86</td></tr>
+                <tr><td class="text-left">Tekstylia</td><td class="text-center">1,91%</td><td>56,54</td><td>58,06</td><td>59,59</td><td>61,12</td><td>62,65</td><td>64,18</td><td>65,70</td><td>67,23</td></tr>
+                <tr><td class="text-left">Metale inne niż aluminium</td><td class="text-center">1,37%</td><td>40,55</td><td>41,65</td><td>42,74</td><td>43,84</td><td>44,94</td><td>46,03</td><td>47,13</td><td>48,22</td></tr>
+                <tr><td class="text-left">Aluminium</td><td class="text-center">0,97%</td><td>28,71</td><td>29,49</td><td>30,26</td><td>31,04</td><td>31,82</td><td>32,59</td><td>33,37</td><td>34,14</td></tr>
+                <tr><td class="text-left">Odpady wielomateriałowe</td><td class="text-center">0,98%</td><td>29,01</td><td>29,79</td><td>30,58</td><td>31,36</td><td>32,14</td><td>32,93</td><td>33,71</td><td>34,50</td></tr>
+                <tr><td class="text-left">Odpady mineralne</td><td class="text-center">8,65%</td><td>256,04</td><td>262,96</td><td>269,88</td><td>276,80</td><td>283,72</td><td>290,64</td><td>297.56</td><td>304,48</td></tr>
+                <tr><td class="text-left">Odpady niebezpieczne</td><td class="text-center">0,39%</td><td>11,54</td><td>11,86</td><td>12,17</td><td>12,48</td><td>12,79</td><td>13,10</td><td>13,42</td><td>13,73</td></tr>
+                <tr><td class="text-left">Odpady higieniczne, pampersy</td><td class="text-center">4,98%</td><td>147,41</td><td>151,39</td><td>155,38</td><td>159,36</td><td>163,34</td><td>167,33</td><td>171,31</td><td>175,30</td></tr>
+                <tr><td class="text-left">Odpady wielkogabarytowe</td><td class="text-center">5,99%</td><td>177,30</td><td>182,10</td><td>186,89</td><td>191,68</td><td>196,47</td><td>201,26</td><td>206,06</td><td>210,85</td></tr>
+                <tr><td class="text-left">Guma, skóra</td><td class="text-center">1,97%</td><td>58,31</td><td>59,89</td><td>61,46</td><td>63,04</td><td>64,62</td><td>66,19</td><td>67,77</td><td>69,34</td></tr>
+                <tr><td class="text-left">ZSEiE</td><td class="text-center">0,34%</td><td>10,06</td><td>10,34</td><td>10,61</td><td>10,88</td><td>11,15</td><td>11,42</td><td>11,70</td><td>11,97</td></tr>
+                <tr class="highlight-row">
+                    <td class="text-left">Razem</td>
+                    <td class="text-center">100,00%</td>
+                    <td>2 960,00</td>
+                    <td>3 040,00</td>
+                    <td>3 120,00</td>
+                    <td>3 200,00</td>
+                    <td>3 280,00</td>
+                    <td>3 360,00</td>
+                    <td>3 440,00</td>
+                    <td>3 520,00</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="table-note">
+            <i>(Wartości wyliczone poprzez przemnożenie masy całkowitej z Tabeli 9 przez odpowiedni udział z Tabeli 6.)</i>
+        </div>
+
+        <table>
+            <caption>Tabela 11. Prognoza ilości frakcji odpadów zbieranych* w gminie [Mg]</caption>
+            <thead>
+                <tr>
+                    <th>Frakcje odpadów</th>
+                    <th>2025</th>
+                    <th>2030</th>
+                    <th>2035</th>
+                    <th>2040</th>
+                    <th>2045</th>
+                    <th>2050</th>
+                    <th>2055</th>
+                    <th>2060</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-left">BIO (spożywcze + zieleń)</td>
+                    <td>836,50</td>
+                    <td>859,10</td>
+                    <td>881,71</td>
+                    <td>904,32</td>
+                    <td>926,93</td>
+                    <td>949,54</td>
+                    <td>972,14</td>
+                    <td>994,75</td>
+                </tr>
+                <tr>
+                    <td class="text-left">Papier i tektura, tworzywa sztuczne, metale, szkło, wielomateriałowe, tekstylia</td>
+                    <td>1 030,38</td>
+                    <td>1 058,22</td>
+                    <td>1 086,07</td>
+                    <td>1 113,92</td>
+                    <td>1 141,77</td>
+                    <td>1 169,62</td>
+                    <td>1 197,46</td>
+                    <td>1 225,31</td>
+                </tr>
+                <tr>
+                    <td class="text-left">ZSEiE</td>
+                    <td>10,06</td>
+                    <td>10,34</td>
+                    <td>10,61</td>
+                    <td>10,88</td>
+                    <td>11,15</td>
+                    <td>11,42</td>
+                    <td>11,70</td>
+                    <td>11,97</td>
+                </tr>
+                <tr>
+                    <td class="text-left">Odpady niebezpieczne</td>
+                    <td>11,54</td>
+                    <td>11,86</td>
+                    <td>12,17</td>
+                    <td>12,48</td>
+                    <td>12,79</td>
+                    <td>13,10</td>
+                    <td>13,42</td>
+                    <td>13,73</td>
+                </tr>
+                <tr>
+                    <td class="text-left">Zmieszane (pozostałe)</td>
+                    <td>1 071,52</td>
+                    <td>1 100,48</td>
+                    <td>1 129,44</td>
+                    <td>1 158,40</td>
+                    <td>1 187,36</td>
+                    <td>1 216,32</td>
+                    <td>1 245,28</td>
+                    <td>1 274,24</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="table-note">* na podstawie tabeli 10.</div>
+
+        <br>
+
+        <table>
+            <caption>Tabela 12. Prognozowane objętości odpadów zmieszanych [V<sub>odp</sub> (m&sup3;)]</caption>
+            <thead>
+                <tr>
+                    <th>Frakcja odpadów</th>
+                    <th>Jedn.</th>
+                    <th>2025</th>
+                    <th>2030</th>
+                    <th>2035</th>
+                    <th>2040</th>
+                    <th>2045</th>
+                    <th>2050</th>
+                    <th>2055</th>
+                    <th>2060</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2" class="text-center" style="vertical-align: middle;"><strong>zmieszane</strong></td>
+                    <td class="text-center"><strong>[Mg]</strong></td>
+                    <td>1 071,52</td>
+                    <td>1 100,48</td>
+                    <td>1 129,44</td>
+                    <td>1 158,40</td>
+                    <td>1 187,36</td>
+                    <td>1 216,32</td>
+                    <td>1 245,28</td>
+                    <td>1 274,24</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><strong>[m&sup3;]</strong></td>
+                    <td>3 896,44</td>
+                    <td>4 001,75</td>
+                    <td>4 107,05</td>
+                    <td>4 212,36</td>
+                    <td>4 317,67</td>
+                    <td>4 422,98</td>
+                    <td>4 528,29</td>
+                    <td>4 633,60</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="table-note">
+            Wartości masy [Mg] przeniesiono bezpośrednio z wiersza "Zmieszane (pozostałe)" z Tabeli 11.<br>
+            Objętość [m&sup3;] obliczono jako iloraz masy i średniej gęstości nasypowej dla odpadów komunalnych zmieszanych. Zgodnie z wytycznymi, wykorzystano wartość uśrednioną z przedziału 0,25 - 0,30 Mg/m&sup3;, przyjmując do obliczeń gęstość równą <strong>0,275 Mg/m&sup3;</strong>.
+        </div>
+
+    </section>
+
+    <div style="margin-top: 50px; text-align: right;">
+        <p>_____________________________________</p>
+        <p style="margin-right: 30px; font-size: 12px;">(Podpis osoby sporządzającej)</p>
+    </div>
+
+</body>
+</html>
